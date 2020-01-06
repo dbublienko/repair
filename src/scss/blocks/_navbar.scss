@@ -1,0 +1,47 @@
+.navbar {
+  padding: 8px 0 8px 0;
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    text-align: right;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  &__button {
+    margin-left: 30px;
+  }
+  &__phone {
+    color: $text-color;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  &__adress {
+      color: $text-color;
+      font-size: 13px;
+      font-weight: 300;
+  }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        &__contacts {
+            display: none;
+        }
+        &__button {
+            font-size: 12px;
+            padding: 15px 26px;
+        }
+        &__logo {
+            width: 91px;
+        }
+    }
+}
