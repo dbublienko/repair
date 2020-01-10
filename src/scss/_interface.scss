@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 .container {
   width: 1170px;
@@ -23,15 +23,11 @@ img {
 }
 @media (max-width: 567px) {
   .container {
-      max-width: 350px;
+      max-width: 400px;
       width: 90%;
   }
 }
-@media (max-width: 400px) {
-  .container {
-      max-width: 280px;
-  }
-}
+
 .button {
   border-radius: 10px;
   background-color: $main-color;
