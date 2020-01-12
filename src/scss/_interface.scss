@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  @include reg;
 }
 img {
   max-width: 100%;

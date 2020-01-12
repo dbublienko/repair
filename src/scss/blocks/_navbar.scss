@@ -19,15 +19,14 @@
   }
   &__phone {
     color: $text-color;
-    font-weight: 700;
     font-size: 20px;
     text-decoration: none;
     margin-top: 10px;
+    @include bold;
   }
   &__adress {
     color: $text-color;
     font-size: 13px;
-    font-weight: 300;
   }
 }
 
