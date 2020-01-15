@@ -1,5 +1,9 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body {
   @include reg;
+  color: $text-color;
 }
 img {
   max-width: 100%;
@@ -33,4 +37,30 @@ img {
   background-color: $main-color;
   border: none;
   padding: 18px 30px;
+  &:hover {
+    background-color: lighten($main-color, 10%);
+    cursor: pointer;
+  }
+}
+
+.section {
+  padding: 90px 0;
+  &-title {
+    font-size: 24px;
+    @include bold;
+  }
+  &-subtitle {
+    font-size: 16px;
+  }
+}
+
+.input {
+  border: 1px solid $border-input;
+  padding: 20px 26px;
+  font-size: 15px;
+  border-radius: 10px;
+  &:focus {
+    outline: none;
+    border-color: $main-color;
+  }
 }

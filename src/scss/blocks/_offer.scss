@@ -1,0 +1,128 @@
+.offer {
+    background: url(../img/offer/offer-bg.jpg) no-repeat;
+    background-position: right center;
+    background-size: contain;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+    }
+    &-block {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        padding-right: 90px;
+    }
+    &__title {
+        max-width: 360px;
+        line-height: 35px;
+        margin-bottom: 24px;
+    }
+    &__subtitle {
+        display: block;
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+    &__input {
+        margin-bottom: 30px;
+        width: 240px;
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+    &__button {
+        width: 100%;
+        min-width: 70px;
+        font-size: 16px;
+        @include bold;
+    }
+    &__call {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    &__manager {
+        max-width: 210px;
+    }
+    &__yourself {
+        max-width: 200px;
+    }
+    &__phone {
+        text-decoration: none;
+        color: $text-color;
+        @include bold;
+    }
+}
+
+@media (min-width: 1201px) {
+    .offer {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1200px) {
+    .offer {
+        background-size: cover;
+        &__input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        &__call {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 30px;
+            line-height: 24px;
+        }
+        &__manager {
+            max-width: 210px;
+            margin-bottom: 20px;
+        }
+        &__yourself {
+            max-width: 200px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .offer {
+        background: #ffffff;
+        &__title {
+            font-size: 18px;
+        }
+        &__subtitle {
+            font-size: 14px;
+        }
+        &__button {
+            font-size: 14px;
+        }
+        &-block {
+            width: 100%;
+            padding-right: 0;
+        }
+        &__manager {
+            max-width: 100%;
+        }
+        &__yourself {
+            max-width: 100%;
+        }
+    }
+}
+@media (max-width: 567px) {
+    .offer {
+        &__manager {
+            max-width: 210px;
+        }
+        &__yourself {
+            max-width: 200px;
+        }
+    }
+}
