@@ -41,6 +41,12 @@ img {
     background-color: lighten($main-color, 10%);
     cursor: pointer;
   }
+  &:active {
+    background-color: $main-color;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .section {
