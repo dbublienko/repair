@@ -481,4 +481,36 @@ img {
   top: 0;
   right: 0;
 }
+
+/* Импорт стилей кнопки возврата на начало сайта */
+.page-up {
+  position: fixed;
+  left: 50%;
+  bottom: 3%;
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.25s, opacity 0.25s;
+  transition: visibility 0.25s, opacity 0.25s;
+}
+
+.page-up_active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.page-up__button {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.page-up__img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 18px;
+}
 /*# sourceMappingURL=style.css.map */
