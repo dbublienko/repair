@@ -2,7 +2,6 @@
     background: $secondary url(../img/portfolio/portfolio-pattern.jpg) repeat-y left center;
     background-size: 50%;
     &__title {
-        max-width: 500px;
         margin: auto;
         margin-bottom: 100px;
     }
@@ -18,5 +17,17 @@
 .slider {
     &__image {
         margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        &__title {
+            font-size: 18px;
+            margin-bottom: 41px;
+        }
+        &__arrows {
+            margin-top: 46px;
+        }
     }
 }
