@@ -15,7 +15,9 @@
   font-style: normal;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -117,6 +119,22 @@ img {
 
 .image-block {
   display: block;
+}
+
+.circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ffd200;
 }
 
 /* Импорт стилей шапки */
@@ -241,19 +259,6 @@ img {
 }
 
 .hero-list__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #ffd200;
   margin-right: 30px;
 }
 
@@ -713,6 +718,258 @@ img {
   .card__title {
     font-size: 14px;
     margin-bottom: 15px;
+  }
+}
+
+/* Импорт стилей раздела с шагами ремонта */
+.steps__title {
+  margin: auto;
+  margin-top: -20px;
+  margin-bottom: 60px;
+  font-size: 30px;
+  line-height: 45px;
+  max-width: 600px;
+}
+
+.steps__subtitle {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.step-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.step-list__text {
+  display: inline-block;
+  text-align: center;
+  max-width: 155px;
+  font-size: 14px;
+}
+
+.step-list__icon {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.step-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .step-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .step-list__item {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+  .step-list__item:nth-child(-n + 5) {
+    margin-bottom: 30px;
+  }
+  .step-list__disabled {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps__title {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+  .steps__subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .step-list__text {
+    font-size: 12px;
+  }
+  .step-list__icon {
+    margin-bottom: 22px;
+  }
+}
+
+@media (max-width: 567px) {
+  .step-list__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .step-list__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Импорт стилей раздела с объявлением про оптовые цены */
+.trade {
+  background-color: #ffd200;
+}
+
+.trade__title {
+  margin: auto;
+  max-width: 900px;
+  font-size: 32px;
+  line-height: 50px;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
+}
+
+.trade-block__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.trade-block__item {
+  position: relative;
+}
+
+.trade-block__text {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: left;
+  max-width: 320px;
+}
+
+.trade-block__strong {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .trade-block__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .trade-block__item {
+    -ms-flex-preferred-size: 51%;
+        flex-basis: 51%;
+    margin-bottom: 30px;
+  }
+  .trade-block__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .trade__title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .trade-block__text {
+    top: 20px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .trade-block__item {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+}
+
+/* Импорт стилей раздела с объявлением про гарантию */
+.guaranty {
+  padding-bottom: 200px;
+}
+
+.guaranty__title {
+  margin: auto;
+  margin-top: -40px;
+  margin-bottom: 100px;
+  max-width: 650px;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.guaranty__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.guaranty__image {
+  margin-bottom: 40px;
+}
+
+.guaranty__item {
+  text-align: center;
+}
+
+.guaranty__text {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.guaranty__item:nth-child(1) > .guaranty__text {
+  max-width: 200px;
+}
+
+.guaranty__item:nth-child(n+2) > .guaranty__text {
+  max-width: 270px;
+}
+
+@media (max-width: 1200px) {
+  .guaranty__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .guaranty__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 45px;
+  }
+  .guaranty__item:last-child {
+    margin-bottom: 0;
+  }
+  .guaranty__image {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guaranty__title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 50px;
+    margin-top: -20px;
+  }
+  .guaranty__text {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */

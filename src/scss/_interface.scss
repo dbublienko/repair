@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 body {
@@ -14,21 +16,21 @@ img {
 }
 
 @media (max-width: 1200px) {
-    .container {
-        max-width: 760px;
-        width: 90%;
-    }
+  .container {
+    max-width: 760px;
+    width: 90%;
+  }
 }
 @media (max-width: 768px) {
-    .container {
-        max-width: 580px;
-        width: 90%;
-    }
+  .container {
+    max-width: 580px;
+    width: 90%;
+  }
 }
 @media (max-width: 567px) {
   .container {
-      max-width: 400px;
-      width: 90%;
+    max-width: 400px;
+    width: 90%;
   }
 }
 
@@ -81,7 +83,8 @@ img {
 }
 
 .arrows {
-  &__left, &__right {
+  &__left,
+  &__right {
     &:hover {
       cursor: pointer;
     }
@@ -90,4 +93,14 @@ img {
 
 .image-block {
   display: block;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid $main-color;
 }
