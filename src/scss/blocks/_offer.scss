@@ -67,6 +67,19 @@
 @media (min-width: 1201px) {
     .offer {
         background-size: cover;
+        &__input {
+            margin-bottom: 10px;
+        }
+    }
+    .name-wrap, .phone-wrap {
+        display: inline-flex;
+        width: 239px;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+    .name-wrap {
+        margin-right: 10px;
     }
 }
 

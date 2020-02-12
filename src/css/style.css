@@ -137,6 +137,21 @@ img {
   border: 2px solid #ffd200;
 }
 
+.invalid {
+  border: 1px solid red !important;
+}
+
+div[id*="-error"] {
+  border: 1px solid red !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
 /* Импорт стилей шапки */
 .navbar {
   padding: 8px 0 8px 0;
@@ -403,6 +418,26 @@ img {
 @media (min-width: 1201px) {
   .offer {
     background-size: cover;
+  }
+  .offer__input {
+    margin-bottom: 10px;
+  }
+  .name-wrap, .phone-wrap {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 239px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .name-wrap {
+    margin-right: 10px;
   }
 }
 
@@ -788,7 +823,7 @@ img {
   .step-list__item:nth-child(-n + 5) {
     margin-bottom: 30px;
   }
-  .step-list__disabled {
+  .step-list_disabled {
     display: none;
   }
 }
@@ -970,6 +1005,195 @@ img {
   .guaranty__text {
     font-size: 14px;
     line-height: 18px;
+  }
+}
+
+/* Импорт стилей раздела бриф */
+.brif {
+  background-image: url(../img/brif/brif-color-bg.jpg), url(../img/brif/brif-bg.jpg);
+  background-position: left center, right center;
+  background-size: 50%, contain;
+  background-repeat: repeat-y, no-repeat;
+}
+
+.brif-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.brif__interview {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.brif__form {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-left: 200px;
+  text-align: center;
+}
+
+.brif__input {
+  max-width: 370px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.brif__button {
+  height: 70px;
+  width: 100%;
+  max-width: 370px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.interview {
+  padding-right: 70px;
+}
+
+.interview__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 22px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.interview__subtitle {
+  display: block;
+  margin-bottom: 95px;
+  font-size: 16px;
+}
+
+.interview-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.interview-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.interview-list__text {
+  max-width: 400px;
+}
+
+.interview-list__counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+  font-size: 14px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #333333;
+  border-radius: 50%;
+}
+
+.form__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 22px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.form__subtitle {
+  display: block;
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+.form__description {
+  display: inline-block;
+}
+
+@media (max-width: 1300px) {
+  .brif__form {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .brif {
+    background-size: 50%, cover;
+  }
+  .brif__form {
+    padding-left: 100px;
+  }
+  .interview {
+    padding-right: 30px;
+  }
+  .interview__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .interview__subtitle {
+    margin-bottom: 30px;
+  }
+  .interview-list__text {
+    font-size: 14px;
+    max-width: 290px;
+  }
+  .interview-list__counter {
+    margin-right: 20px;
+  }
+  .form__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .form__subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .brif__form {
+    padding-left: 70px;
+  }
+}
+
+@media (max-width: 950px) {
+  .brif__form {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brif {
+    background-position: center top, center bottom;
+    background-size: 100% 50%, cover;
+    background-repeat: repeat-x, no-repeat;
+  }
+  .brif-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .brif__form {
+    margin-top: 150px;
+    padding-left: 0;
+  }
+  .interview {
+    padding-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
