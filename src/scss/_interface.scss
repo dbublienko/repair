@@ -39,6 +39,7 @@ img {
   background-color: $main-color;
   border: none;
   padding: 18px 30px;
+  @include bold;
   &:hover {
     background-color: lighten($main-color, 10%);
     cursor: pointer;

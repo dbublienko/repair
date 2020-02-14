@@ -63,6 +63,8 @@ img {
   background-color: #ffd200;
   border: none;
   padding: 18px 30px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .button:hover {
@@ -1049,10 +1051,11 @@ div[id*="-error"] {
 }
 
 .interview {
-  padding-right: 70px;
+  padding-right: 60px;
 }
 
 .interview__title {
+  max-width: 520px;
   margin-top: 0;
   margin-bottom: 50px;
   font-size: 22px;
@@ -1087,6 +1090,7 @@ div[id*="-error"] {
 
 .interview-list__text {
   max-width: 400px;
+  font-size: 14px;
 }
 
 .interview-list__counter {
@@ -1108,6 +1112,8 @@ div[id*="-error"] {
 }
 
 .form__title {
+  max-width: 350px;
+  margin: auto;
   margin-top: 0;
   margin-bottom: 50px;
   font-size: 22px;
@@ -1123,6 +1129,7 @@ div[id*="-error"] {
 
 .form__description {
   display: inline-block;
+  font-size: 15px;
 }
 
 @media (max-width: 1300px) {
@@ -1142,21 +1149,21 @@ div[id*="-error"] {
     padding-right: 30px;
   }
   .interview__title {
-    font-size: 20px;
     margin-bottom: 15px;
   }
   .interview__subtitle {
     margin-bottom: 30px;
   }
   .interview-list__text {
-    font-size: 14px;
     max-width: 290px;
   }
   .interview-list__counter {
     margin-right: 20px;
   }
+  .interview-list__item {
+    margin-bottom: 20px;
+  }
   .form__title {
-    font-size: 20px;
     margin-bottom: 15px;
   }
   .form__subtitle {
@@ -1174,12 +1181,21 @@ div[id*="-error"] {
   .brif__form {
     padding-left: 50px;
   }
+  .interview-list__text {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 802px) {
+  .form__title {
+    margin-bottom: 38px;
+  }
 }
 
 @media (max-width: 768px) {
   .brif {
     background-position: center top, center bottom;
-    background-size: 100% 50%, cover;
+    background-size: 100% 48%, cover;
     background-repeat: repeat-x, no-repeat;
   }
   .brif-block {
@@ -1189,11 +1205,167 @@ div[id*="-error"] {
             flex-direction: column;
   }
   .brif__form {
-    margin-top: 150px;
+    margin-top: 100px;
     padding-left: 0;
   }
   .interview {
     padding-right: 0;
+  }
+  .interview__title {
+    font-size: 18px;
+  }
+  .interview__subtitle {
+    font-size: 14px;
+  }
+  .interview-list__text {
+    font-size: 14px;
+  }
+  .form__title {
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .form__subtitle {
+    font-size: 14px;
+  }
+  .form__description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 567px) {
+  .brif__input {
+    margin-bottom: 10px;
+  }
+  .brif__button {
+    margin-top: 0;
+  }
+}
+
+/* Импорт стилей подвала */
+.footer {
+  position: relative;
+}
+
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+}
+
+.contacts {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-top: 100px;
+  padding-left: 200px;
+}
+
+.contacts__title {
+  max-width: 285px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0;
+  margin-bottom: 100px;
+}
+
+.contacts-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contacts-list {
+  padding: 0;
+  list-style: none;
+}
+
+.contacts-list__icon {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 23px;
+}
+
+.contacts-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 39px;
+}
+
+.contacts-list__text {
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: -5px;
+}
+
+.contacts-list__text_bold {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.contacts-list__link {
+  text-decoration: none;
+  color: #333333;
+}
+
+@media (max-width: 1300px) {
+  .contacts {
+    padding-left: 140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contacts {
+    padding-left: 100px;
+  }
+  .contacts__title {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .contacts {
+    padding-left: 70px;
+  }
+}
+
+@media (max-width: 950px) {
+  .contacts {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map {
+    top: 100%;
+    width: 100%;
+  }
+  .contacts {
+    padding-top: 65px;
+    padding-left: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .contacts__title {
+    max-width: 100%;
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+  .contacts-list__item {
+    margin-bottom: 35px;
+  }
+  .contacts-list__item:last-child {
+    margin-bottom: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */
