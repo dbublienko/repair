@@ -1,6 +1,10 @@
+@import "_normalize.scss";
 @import "_fonts.scss";
 @import "_colors.scss";
 @import "_interface.scss";
+@import "_animate.scss";
+@import "_slick.scss";
+
 /* Импорт стилей шапки */
 @import "blocks/_navbar.scss";
 /* Импорт стилей hero */
